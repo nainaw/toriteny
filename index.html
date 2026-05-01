@@ -31,7 +31,7 @@
             text-align: center;
         }
 
-        .outline-section, .scripture-section {
+        .content-box {
             background: white;
             padding: 25px;
             margin-bottom: 20px;
@@ -43,24 +43,31 @@
             color: var(--accent-color);
             border-bottom: 1px solid #eee;
             padding-bottom: 5px;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             margin-top: 0;
         }
 
-        ul { list-style-type: none; padding-left: 0; }
-        ul ul { padding-left: 20px; list-style-type: disc; margin-top: 8px; }
-        li { margin-bottom: 12px; }
+        /* Respecting Markdown indentation and numbering */
+        ol { padding-left: 20px; margin: 0; }
+        ul { list-style-type: disc; padding-left: 25px; margin: 10px 0; }
+        li { margin-bottom: 10px; }
 
         .bible-link {
             color: var(--link-color);
             text-decoration: none;
             font-weight: bold;
             background: #ebf5fb;
-            padding: 2px 6px;
+            padding: 1px 6px;
             border-radius: 4px;
         }
 
-        .verse-content {
+        .verse-section {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+
+        .verse-card {
             margin-bottom: 20px;
             padding: 15px;
             background: #fdfaf6;
@@ -71,7 +78,7 @@
             font-weight: bold;
             color: var(--primary-color);
             display: block;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
         .back-link {
@@ -79,15 +86,10 @@
             color: #888;
             text-decoration: none;
             display: inline-block;
-            margin-top: 5px;
+            margin-top: 10px;
         }
 
-        footer { text-align: center; margin-top: 40px; color: #888; padding-bottom: 20px; }
-
-        @media (max-width: 600px) {
-            body { padding: 10px; }
-            .outline-section { padding: 15px; }
-        }
+        footer { text-align: center; margin-top: 50px; color: #888; padding-bottom: 30px; }
     </style>
 </head>
 <body>
@@ -96,136 +98,145 @@
         <h1>ARARAOTY NY FAMINDRAMPO SY FAHASOAVANA</h1>
     </header>
 
-    <!-- 1. INTRO -->
-    <div class="outline-section">
-        <h2>1. INTRO</h2>
-        <ul>
-            <li>TOHIZO: <strong>matimaty foana</strong> ohatra ny ..........</li>
-            <li>TAHAKA ny hoe: Ny valala natao ho faty <strong>hohanina</strong>.</li>
-            <li><strong>Ringana</strong> ao amin'ny <a href="#lio13_3" class="bible-link">Lio 13:3</a> = nosamborim-boka.</li>
-            <li>Tsisy nilana azy tahaka ny <strong>tsiparifary</strong> <a href="#mat13_30" class="bible-link">Mat 13:30</a>.</li>
-            <li>Aleo <strong>maty ao amin'ny Tompo</strong>. <a href="#apok14_13" class="bible-link">Apok 14:13</a></li>
-        </ul>
-    </div>
-
-    <!-- 2. HEVI-DISO ROA -->
-    <div class="outline-section">
-        <h2>2. HEVI-DISO ROA</h2>
-        <ul>
-            <li><strong>LOZA ≠ FAHOTANA MIHOAM-PAMPANA</strong>
+    <div class="content-box">
+        <ol>
+            <!-- 1. INTRO -->
+            <li><strong>INTRO</strong>
                 <ul>
-                    <li><a href="#lio13_1" class="bible-link">Lio 13:1,2,4</a></li>
-                    <li><strong>Fitsaratsarana</strong> ny hafa, <strong>isika</strong> koa</li>
-                    <li><strong>Diso</strong> izany hoy Jesosy: <a href="#rom3_23" class="bible-link">Rom 3:23</a></li>
+                    <li>TOHIZO: <strong>matimaty foana</strong> ohatra ny ..........</li>
+                    <li>TAHAKA ny hoe: Ny valala natao ho faty <strong>hohanina</strong>. Raha tsy izay dia <strong>tsy nisy dikany ny fisiany</strong>, tsy nisy dikany ny nahafatesany.</li>
+                    <li><strong>Ringana</strong> ao amin'ny <a href="#lio13_3" class="bible-link">Lio 13:3</a> = nosamborim-<strong>boka</strong> (boka=<strong>Satana</strong>). Tsisy nilana azy tahaka ny <strong>tsiparifary</strong> <a href="#mat13_30" class="bible-link">Mat 13:30</a>.</li>
+                    <li>Aleo <strong>maty ao amin'ny (nosamborin'ny) Tompo</strong>. <a href="#apok14_13" class="bible-link">Apok 14:13</a></li>
+                    <li><a href="#lio13_3" class="bible-link">Lio 13:3</a> Tsia hoy Izaho aminareo, fa raha tsy mibebaka ianareo dia ho <strong>ringana</strong> tahaka azy koa ianareo rehetra</li>
                 </ul>
             </li>
-            <li><strong>FITAHIANA ≠ FANKASITRAHAN'NY AVO</strong>
+
+            <!-- 2. HEVI-DISO ROA -->
+            <li><strong>HEVI-DISO ROA</strong>
+                <ol>
+                    <li>LOZA # FAHOTANA MIHOAM-PAMPANA
+                        <ul>
+                            <li><a href="#lio13_1" class="bible-link">Lio 13:1,2,4</a></li>
+                            <li><strong>Fitsaratsarana</strong> ny hafa, <strong>isika</strong> koa</li>
+                            <li><strong>Diso</strong> izany hoy Jesosy: Tsia hoy Izaho aminareo <a href="#rom3_23" class="bible-link">Rom 3:23</a></li>
+                        </ul>
+                    </li>
+                    <li>FITAHIANA # FANKASITRAHAN'NY AVO
+                        <ul>
+                            <li><strong>Ilay nilaza</strong> vaovao mihevi-tena ho marina satria <strong>tsy voa</strong>, isika koa</li>
+                            <li><a href="#rom2_4" class="bible-link">Rom 2:4</a> Sa amavoinao ... = <strong>manarapo</strong> amin'ny ratsy <a href="#mpitt8_11" class="bible-link">Mpitt 8:11</a></li>
+                            <li><strong>Diso</strong> izany hoy Jesosy: <a href="#lio13_3" class="bible-link">Lio 13:3,5</a> Raha tsy ... --<strong>ianareo</strong>--</li>
+                        </ul>
+                    </li>
+                </ol>
+            </li>
+
+            <!-- 3. FIBEBAHANA -->
+            <li><strong>FIBEBAHANA (sao valala nosamborim-boka)</strong>
                 <ul>
-                    <li><a href="#rom2_4" class="bible-link">Rom 2:4</a> sy <a href="#mpitt8_11" class="bible-link">Mpitt 8:11</a></li>
-                    <li><strong>Diso</strong> izany hoy Jesosy: <a href="#lio13_3" class="bible-link">Lio 13:3,5</a></li>
+                    <li>RAHA TSY <strong>MIBEBAKA</strong> IANAREO ... (MESSAGE)
+                        <ul>
+                            <li>Naveriny in-droa</li>
+                        </ul>
+                    </li>
+                    <li>JIOSY <strong>RINGANA</strong> 40 TAONA TAORIANA</li>
+                    <li><a href="#ezek33_11" class="bible-link">Ezek 33:11</a> <strong>MIALA</strong> AMIN'NY LALAN-DRATSINAREO ...</li>
                 </ul>
             </li>
-        </ul>
+
+            <!-- 4. FAMOAZANA -->
+            <li><strong>FAMOAZANA</strong>
+                <ul>
+                    <li>Ilay <strong>aviavy</strong> (tantara) <a href="#lio13_7" class="bible-link">Lio 13:7-9</a></li>
+                    <li><strong>Famindrampo</strong> ny tsy hikapana azy, raha mibebaka</li>
+                    <li><strong>Fahasoavana</strong> ny nikarakarana azy mba <strong>hamoazany</strong> (<a href="#mat3_8" class="bible-link">Mat. 3:8</a> sy <a href="#gal5_22" class="bible-link">Gal 5:22</a>)</li>
+                    <li>Misy <strong>fetrany</strong> ireo ka araraoty dieny izao.</li>
+                </ul>
+            </li>
+
+            <!-- 5. OUTRO -->
+            <li><strong>OUTRO</strong>
+                <ul>
+                    <li>Ilay <strong>zanaka adala</strong> saika valala nosamborim-boka raha tsy nibebaka</li>
+                    <li><a href="#2kor6_2" class="bible-link">2 Kor 6:2</a> <strong>Araraoty!</strong></li>
+                </ul>
+            </li>
+        </ol>
     </div>
 
-    <!-- 3. FIBEBAHANA -->
-    <div class="outline-section">
-        <h2>3. FIBEBAHANA (sao valala nosamborim-boka)</h2>
-        <ul>
-            <li><strong>RAHA TSY MIBEBAKA IANAREO...</strong> (Naveriny in-droa)</li>
-            <li>JIOSY <strong>RINGANA</strong> 40 TAONA TAORIANA</li>
-            <li><a href="#ezek33_11" class="bible-link">Ezek 33:11</a> <strong>MIALA</strong> AMIN'NY LALAN-DRATSINAREO...</li>
-        </ul>
-    </div>
-
-    <!-- 4. FAMOAZANA -->
-    <div class="outline-section">
-        <h2>4. FAMOAZANA</h2>
-        <ul>
-            <li>Ilay <strong>aviavy</strong> (tantara)</li>
-            <li><strong>Famindrampo</strong> ny tsy hikapana azy, raha mibebaka</li>
-            <li><strong>Fahasoavana</strong> ny nikarakarana azy mba <strong>hamoazany</strong></li>
-            <li><a href="#mat3_8" class="bible-link">Mat. 3:8</a> sy <a href="#gal5_22" class="bible-link">Gal 5:22</a></li>
-            <li>Misy <strong>fetrany</strong> ireo ka araraoty dieny izao.</li>
-        </ul>
-    </div>
-
-    <!-- 5. OUTRO -->
-    <div class="outline-section">
-        <h2>5. OUTRO</h2>
-        <ul>
-            <li>Ilay <strong>zanaka adala</strong> saika valala nosamborim-boka raha tsy nibebaka</li>
-            <li><a href="#2kor6_2" class="bible-link">2 Kor 6:2</a> <strong>ARARAOTY ANKEHITRINY!</strong></li>
-        </ul>
-    </div>
-
-    <!-- SCRIPTURE APPENDIX -->
-    <div class="scripture-section">
+    <!-- SCRIPTURE SECTION -->
+    <div class="verse-section">
         <h2 id="verses">NY SORATRA MASINA (MG1865)</h2>
 
-        <div class="verse-content" id="lio13_1">
-            <span class="verse-title">Lioka 13:1, 2, 4, 5</span>
-            <p>1 Ary tamin'izany andro izany dia nisy olona teo izay nanambara taminy ny amin'ny Galiliana, ny rany nifangaro tamin'ny fanatiny nataon'i Pilato. 2 Ary Jesosy namaly ka nanao taminy hoe: Ataonareo va fa ireny Galiliana ireny dia mpanota mihoatra noho ny Galiliana rehetra, satria niharan'izany zavatra izany izy? ... 4 Ary ireny valo ambin'ny folo ireny, izay nianjeran'ny tilikambo tany Siloama ka maty, ataonareo va fa mpanota mihoatra noho ny olona rehetra monina tany Jerosalema ireny? 5 Tsia, hoy Izaho aminareo; fa raha tsy mibebaka ianareo, dia ho ringana tahaka azy koa ianareo rehetra.</p>
+        <div class="verse-card" id="lio13_1">
+            <span class="verse-title">Lioka 13:1, 2, 4</span>
+            <p>1 Ary tamin'izany andro izany dia nisy olona teo izay nanambara taminy ny amin'ny Galiliana, ny rany nifangaro tamin'ny fanatiny nataon'i Pilato. 2 Ary Jesosy namaly ka nanao taminy hoe: Ataonareo va fa ireny Galiliana ireny dia mpanota mihoatra noho ny Galiliana rehetra... 4 Ary ireny valo ambin'ny folo ireny, izay nianjeran'ny tilikambo tany Siloama ka maty, ataonareo va fa mpanota mihoatra noho ny olona rehetra monina tany Jerosalema ireny?</p>
             <a href="#" class="back-link">↑ Miverina</a>
         </div>
 
-        <div class="verse-content" id="lio13_3">
-            <span class="verse-title">Lioka 13:3</span>
+        <div class="verse-card" id="lio13_3">
+            <span class="verse-title">Lioka 13:3, 5</span>
             <p>Tsia, hoy Izaho aminareo; fa raha tsy mibebaka ianareo, dia ho ringana tahaka azy koa ianareo rehetra.</p>
             <a href="#" class="back-link">↑ Miverina</a>
         </div>
 
-        <div class="verse-content" id="mat13_30">
+        <div class="verse-card" id="lio13_7">
+            <span class="verse-title">Lioka 13:7-9</span>
+            <p>7 Ary hoy izy tamin'ny mpikarakara ny tanim-boaloboka: Indro, telo taona izao no tonga nitady voa tamin'ity aviavy ity aho, fa tsy nahita; kapao izy; nahoana izy no mandany ny tany fotsiny? 8 Fa izy namaly ka nanao taminy hoe: Tompo ô, avelao ihany izy amin'ity taona ity, ambara-pandihiko ny manodidina azy sy hametrahako zezika; 9 fandrao hamoa izy amin'ny ho avy; fa raha tsy izany, dia vao kapao ihany izy.</p>
+            <a href="#" class="back-link">↑ Miverina</a>
+        </div>
+
+        <div class="verse-card" id="mat13_30">
             <span class="verse-title">Matio 13:30</span>
             <p>Avelao hiara-mitombo izy roroa ambara-pihavin'ny fijinjana; ary amin'ny fijinjana dia holazaiko amin'ny mpijinja hoe: Angony aloha ny tsiparifary, ka fehezo ho amboarany hodorana; fa ny vary dia angony ho any an-tsandriko.</p>
             <a href="#" class="back-link">↑ Miverina</a>
         </div>
 
-        <div class="verse-content" id="apok14_13">
+        <div class="verse-card" id="apok14_13">
             <span class="verse-title">Apokalypsy 14:13</span>
             <p>Ary nandre feo avy any an-danitra aho nanao hoe: Soraty: Sambatra ny maty, dia izay maty ao amin'ny Tompo hatramin'izao. Eny, hoy ny Fanahy, fa hiala sasatra amin'ny fisasarany izy; fa ny asany manaraka azy.</p>
             <a href="#" class="back-link">↑ Miverina</a>
         </div>
 
-        <div class="verse-content" id="rom3_23">
+        <div class="verse-card" id="rom3_23">
             <span class="verse-title">Romana 3:23</span>
             <p>Fa samy efa nanota izy rehetra ka tsy manana ny voninahitra avy amin'Andriamanitra.</p>
             <a href="#" class="back-link">↑ Miverina</a>
         </div>
 
-        <div class="verse-content" id="rom2_4">
+        <div class="verse-card" id="rom2_4">
             <span class="verse-title">Romana 2:4</span>
             <p>Na manao tsinontsinona ny haren'ny fahamoram-panahiny sy ny fandeferany ary ny fahari-po va ianao, ka tsy fantatrao fa ny fahamoram-panahin'Andriamanitra dia mitaona anao hibebaka?</p>
             <a href="#" class="back-link">↑ Miverina</a>
         </div>
 
-        <div class="verse-content" id="mpitt8_11">
+        <div class="verse-card" id="mpitt8_11">
             <span class="verse-title">Mpitoriteny 8:11</span>
             <p>Satria tsy tanterahina vetivety ny fitsarana ny ratsy natao, dia izany no mahatonga ny fon'ny zanak'olona ho madiodio hanao ratsy.</p>
             <a href="#" class="back-link">↑ Miverina</a>
         </div>
 
-        <div class="verse-content" id="ezek33_11">
+        <div class="verse-card" id="ezek33_11">
             <span class="verse-title">Ezekiela 33:11</span>
-            <p>Lazao aminy hoe: Raha velona koa Aho, hoy Jehovah Tompo, dia tsy sitrako ny fahafatesan'ny ratsy fanahy, fa ny hialan'ny ratsy fanahy amin'ny lalany mba ho velona izy. Mialà, mialà amin'ny lalan-dratsinareo; fa nahoana no ho faty ianareo, ry taranak'Isiraely?</p>
+            <p>Lazao aminy hoe: Raha velona koa Aho, hoy Jehovah Tompo, dia tsy sitrako ny fahafatesan'ny ratsy fanahy, fa ny hialan'ny ratsy fanahy amin'ny lalany mba ho velona izy. Mialà, mialà amin'ny lalan-dratsinareo...</p>
             <a href="#" class="back-link">↑ Miverina</a>
         </div>
 
-        <div class="verse-content" id="mat3_8">
+        <div class="verse-card" id="mat3_8">
             <span class="verse-title">Matio 3:8</span>
             <p>Koa mamoaza voa miendrika ny fibebahana.</p>
             <a href="#" class="back-link">↑ Miverina</a>
         </div>
 
-        <div class="verse-content" id="gal5_22">
-            <span class="verse-title">Galatiana 5:22, 23</span>
+        <div class="verse-card" id="gal5_22">
+            <span class="verse-title">Galatiana 5:22</span>
             <p>Fa ny vokatry ny Fanahy kosa dia fitiavana, fifaliana, fiadanana, fahari-po, fahamoram-panahy, fanaovan-tsoa, fahatokiana, fandeferana, fifehezan-tena.</p>
             <a href="#" class="back-link">↑ Miverina</a>
         </div>
 
-        <div class="verse-content" id="2kor6_2">
+        <div class="verse-card" id="2kor6_2">
             <span class="verse-title">2 Korintiana 6:2</span>
-            <p>(Fa hoy Izy: Tamin'ny taona fankasitrahana no nihainoako anao, Ary tamin'ny andro famonjena no namonjeko anao; indro, ankehitriny no andro fankasitrahana; indro, ankehitriny no andro famonjena;)</p>
+            <p>fa hoy Izy: Tamin'ny taona fankasitrahana no nihainoako anao, Ary tamin'ny andro famonjena no namonjeko anao; indro, ankehitriny no andro fankasitrahana; indro, ankehitriny no andro famonjena;</p>
             <a href="#" class="back-link">↑ Miverina</a>
         </div>
     </div>
