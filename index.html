@@ -21,6 +21,7 @@
             max-width: 900px;
             margin: 0 auto;
             padding: 20px;
+            scroll-behavior: smooth;
         }
 
         header {
@@ -38,7 +39,7 @@
             padding-bottom: 10px;
         }
 
-        /* Section containers (Materialized look) */
+        /* Materialized Section Cards */
         .section-card {
             background: var(--card-bg);
             padding: 30px;
@@ -57,16 +58,18 @@
             padding-bottom: 10px;
         }
 
+        /* Bold text is now Orange */
+        strong { 
+            color: var(--accent-color); 
+        }
+
         /* List Styling */
         ol, ul { padding-left: 20px; }
         li { margin-bottom: 12px; }
         
-        /* Nesting logic to match your outline levels */
         .main-list > li { font-weight: bold; font-size: 1.1rem; list-style-type: decimal; }
         .sub-list { font-weight: normal; font-size: 1rem; list-style-type: upper-alpha; margin-top: 10px; }
         .detail-list { font-weight: normal; font-size: 0.95rem; list-style-type: disc; margin-top: 8px; }
-
-        strong { color: #000; }
 
         /* Links to Bible Verses */
         .bible-link {
@@ -76,7 +79,9 @@
             padding: 2px 6px;
             border-radius: 4px;
             font-size: 0.9rem;
+            transition: background 0.3s;
         }
+        .bible-link:hover { background: #d6eaf8; }
 
         /* Appendix Section */
         .appendix {
@@ -89,11 +94,22 @@
             padding: 15px;
             background: #fff;
             border-left: 5px solid var(--accent-color);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         .verse-ref { font-weight: bold; display: block; margin-bottom: 5px; color: var(--primary-color); }
+
+        /* Restored Back Link Styling */
+        .back-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: #888;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-link:hover { color: var(--accent-color); }
 
         footer { text-align: center; margin-top: 40px; color: #7f8c8d; font-size: 0.9rem; padding-bottom: 20px; }
 
@@ -105,7 +121,7 @@
 </head>
 <body>
 
-    <header>
+    <header id="top">
         <h1>ARARAOTY NY FAMINDRAMPO SY FAHASOAVANA</h1>
     </header>
 
@@ -199,61 +215,73 @@
         <div class="verse-box" id="v-lio13_1">
             <span class="verse-ref">Lioka 13:1, 2, 4</span>
             <p>Ataonareo va fa ireny Galiliana ireny dia mpanota mihoatra noho ny Galiliana rehetra... fa raha tsy mibebaka ianareo, dia ho ringana tahaka azy koa ianareo rehetra.</p>
+            <a href="#top" class="back-link">↑ Miverina</a>
         </div>
 
         <div class="verse-box" id="v-lio13_3">
             <span class="verse-ref">Lioka 13:3, 5</span>
             <p>Tsia, hoy Izaho aminareo; fa raha tsy mibebaka ianareo, dia ho ringana tahaka azy koa ianareo rehetra.</p>
+            <a href="#top" class="back-link">↑ Miverina</a>
         </div>
 
         <div class="verse-box" id="v-lio13_7">
             <span class="verse-ref">Lioka 13:7-9</span>
             <p>Indro, telo taona izao no tonga nitady voa tamin'ity aviavy ity aho, fa tsy nahita; kapao izy... Tompo ô, avelao ihany izy amin'ity taona ity.</p>
+            <a href="#top" class="back-link">↑ Miverina</a>
         </div>
 
         <div class="verse-box" id="v-mat13_30">
             <span class="verse-ref">Matio 13:30</span>
             <p>Angony aloha ny tsiparifary, ka fehezo ho amboarany hodorana; fa ny vary dia angony ho any an-tsandriko.</p>
+            <a href="#top" class="back-link">↑ Miverina</a>
         </div>
 
         <div class="verse-box" id="v-apok14_13">
             <span class="verse-ref">Apokalypsy 14:13</span>
             <p>Sambatra ny maty, dia izay maty ao amin'ny Tompo hatramin'izao.</p>
+            <a href="#top" class="back-link">↑ Miverina</a>
         </div>
 
         <div class="verse-box" id="v-rom3_23">
             <span class="verse-ref">Romana 3:23</span>
             <p>Fa samy efa nanota izy rehetra ka tsy manana ny voninahitra avy amin'Andriamanitra.</p>
+            <a href="#top" class="back-link">↑ Miverina</a>
         </div>
 
         <div class="verse-box" id="v-rom2_4">
             <span class="verse-ref">Romana 2:4</span>
             <p>...ny fahamoram-panahin'Andriamanitra dia mitaona anao hibebaka?</p>
+            <a href="#top" class="back-link">↑ Miverina</a>
         </div>
 
         <div class="verse-box" id="v-mpitt8_11">
             <span class="verse-ref">Mpitoriteny 8:11</span>
             <p>Satria tsy tanterahina vetivety ny fitsarana ny ratsy natao, dia izany no mahatonga ny fon'ny zanak'olona ho madiodio hanao ratsy.</p>
+            <a href="#top" class="back-link">↑ Miverina</a>
         </div>
 
         <div class="verse-box" id="v-ezek33_11">
             <span class="verse-ref">Ezekiela 33:11</span>
             <p>Mialà, mialà amin'ny lalan-dratsinareo; fa nahoana no ho faty ianareo, ry taranak'Isiraely?</p>
+            <a href="#top" class="back-link">↑ Miverina</a>
         </div>
 
         <div class="verse-box" id="v-mat3_8">
             <span class="verse-ref">Matio 3:8</span>
             <p>Koa mamoaza voa miendrika ny fibebahana.</p>
+            <a href="#top" class="back-link">↑ Miverina</a>
         </div>
 
         <div class="verse-box" id="v-gal5_22">
             <span class="verse-ref">Galatiana 5:22</span>
             <p>Fa ny vokatry ny Fanahy kosa dia fitiavana, fifaliana, fiadanana, fahari-po, fahamoram-panahy...</p>
+            <a href="#top" class="back-link">↑ Miverina</a>
         </div>
 
         <div class="verse-box" id="v-2kor6_2">
             <span class="verse-ref">2 Korintiana 6:2</span>
             <p>Indro, ankehitriny no andro fankasitrahana; indro, ankehitriny no andro famonjena.</p>
+            <a href="#top" class="back-link">↑ Miverina</a>
         </div>
     </div>
 
